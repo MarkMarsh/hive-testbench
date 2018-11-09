@@ -1,8 +1,8 @@
 -- set hive.enforce.bucketing=true;
 -- set hive.enforce.sorting=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
-set hive.exec.max.dynamic.partitions.pernode=100000;
-set hive.exec.max.dynamic.partitions=100000;
+set hive.exec.max.dynamic.partitions.pernode=200000;
+set hive.exec.max.dynamic.partitions=200000;
 set hive.exec.max.created.files=1000000;
 set hive.exec.parallel=true;
 set hive.exec.reducers.max=${REDUCERS};
@@ -27,3 +27,6 @@ set hive.tez.min.partition.factor=0.01;
 -- set mapreduce.map.memory.mb=3072;
 -- set mapreduce.reduce.memory.mb=4096;
 -- set io.sort.mb=800;
+
+set parquet.compression=snappy;
+
